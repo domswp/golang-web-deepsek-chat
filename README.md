@@ -68,12 +68,16 @@ go get github.com/sashabaranov/go-openai
 go get github.com/joho/godotenv
 go mod tidy
 ```
+---
+
 ## 🧪 .env File
 
 Create .env and add your DeepSeek API key:
 ```bash
 DEEPSEEK_API_KEY=your_deepseek_api_key
 ```
+---
+
 ## 🚀 Run the Project
 
 ```bash
@@ -83,6 +87,7 @@ visit:
 ```bash
 http://localhost:8080
 ```
+---
 
 ## 🌍 Share with Others (Ngrok)
 1. Install Ngrok
@@ -105,6 +110,8 @@ Ngrok will give you a public URL like:
 https://1234abcd.ngrok.io
 ```
 Share with your friend
+
+---
 
 ## 🧠 System Prompt
 
