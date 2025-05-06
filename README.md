@@ -1,6 +1,20 @@
-# 🧠 DeepSeek Web Chat — Go + API + HTML
+# 🧠 Marketing AI Agent Deepsek — Go + API + HTML
 A lightweight AI chat app built with **Golang**, connected to the **DeepSeek API**, with a minimal web interface.  
 Ideal for small projects, assistant demos (e.g., for Westown View apartment), and learning purposes.
+
+---
+
+## ✨ Why This Project Was Created
+
+This project was created as a lightweight **web-based AI chatbot** that runs locally but can also be easily shared over the internet using tools like Ngrok — with zero deployment cost.
+
+The main goals are:
+- 💼 To demonstrate a practical **AI assistant for real estate marketing**, especially for Westown View Apartment.
+- 🧠 To explore the integration of **LLMs like DeepSeek** via OpenAI-compatible APIs using Golang.
+- 🌐 To enable **easy sharing of a chatbot** with friends or clients without needing a VPS or cloud server.
+- 🎓 To serve as a simple **end-to-end fullstack project**, combining backend API logic and a minimal HTML frontend.
+
+This project is ideal for learning, prototyping, and showcasing how LLMs can be used in everyday real-world applications.
 
 ---
 
@@ -102,15 +116,3 @@ System prompt is defined in main.go:
 }
 ```
 You can easily customize this.
-
-## ✨ Why This Project Was Created
-
-This project was created as a lightweight **web-based AI chatbot** that runs locally but can also be easily shared over the internet using tools like Ngrok — with zero deployment cost.
-
-The main goals are:
-- 💼 To demonstrate a practical **AI assistant for real estate marketing**, especially for Westown View Apartment.
-- 🧠 To explore the integration of **LLMs like DeepSeek** via OpenAI-compatible APIs using Golang.
-- 🌐 To enable **easy sharing of a chatbot** with friends or clients without needing a VPS or cloud server.
-- 🎓 To serve as a simple **end-to-end fullstack project**, combining backend API logic and a minimal HTML frontend.
-
-This project is ideal for learning, prototyping, and showcasing how LLMs can be used in everyday real-world applications.
