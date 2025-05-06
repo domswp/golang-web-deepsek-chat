@@ -14,6 +14,7 @@ Ideal for small projects, assistant demos (e.g., for Westown View apartment), an
 ---
 
 ## 📁 Folder Structure
+
 deepseek-chat/
 ├── main.go # Go backend server
 ├── .env # API key (DeepSeek)
