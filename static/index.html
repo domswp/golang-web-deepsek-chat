@@ -1,0 +1,70 @@
+<!--
+  DeepSeek Web Chat - Frontend
+  ----------------------------
+  Halaman web sederhana untuk mengirim prompt ke server Go (API DeepSeek).
+  Input user akan dikirim ke endpoint `/chat` dalam format JSON.
+  Output jawaban dari AI akan ditampilkan di elemen <div id="output">.
+
+  Kebutuhan:
+  - Server Go aktif di localhost:8080
+  - Endpoint: POST /chat
+  - Response: { "answer": "..." }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DeepSeek Chat - Westown View Assistant</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    input, button {
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    #output {
+      background: #f9f9f9;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h2>💬 Chat Asisten Westown View</h2>
+  <p>Masukkan pertanyaan kamu seputar apartemen Westown View:</p>
+  <input id="prompt" type="text" placeholder="Contoh: Apa fasilitas yang ditawarkan?" style="width: 80%;" />
+  <button onclick="ask()">Kirim</button>
+
+  <div id="output"></div>
+
+  <script>
+    // Fungsi untuk kirim prompt ke backend dan tampilkan respons
+    function ask() {
+      const prompt = document.getElementById("prompt").value;
+      if (!prompt.trim()) return;
+
+      fetch('/chat', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ prompt })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("output").textContent = data.answer;
+      })
+      .catch(err => {
+        document.getElementById("output").textContent = "❌ Terjadi kesalahan: " + err;
+      });
+    }
+  </script>
+</body>
+</html>
+
